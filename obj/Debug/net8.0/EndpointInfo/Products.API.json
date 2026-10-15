@@ -178,6 +178,7 @@
     "schemas": {
       "CreateProductCommand": {
         "required": [
+          "categoryId",
           "name"
         ],
         "type": "object",
@@ -192,6 +193,10 @@
             "minimum": 0.01,
             "type": "number",
             "format": "double"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
