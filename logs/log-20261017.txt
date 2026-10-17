@@ -1,0 +1,6 @@
+2026-10-17 15:28:41.907 +03:00 [INF] Now listening on: https://localhost:7299
+2026-10-17 15:28:41.945 +03:00 [INF] Now listening on: http://localhost:5247
+2026-10-17 15:28:42.133 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-17 15:28:42.135 +03:00 [INF] Hosting environment: Development
+2026-10-17 15:28:42.137 +03:00 [INF] Content root path: D:\ITI\Humavolve\Task3\Products.API
+2026-10-17 15:28:45.760 +03:00 [INF] HTTP GET /swagger/index.html responded 200 in 266.1936 ms

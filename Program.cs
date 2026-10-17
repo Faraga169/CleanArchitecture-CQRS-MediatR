@@ -1,4 +1,5 @@
 
+using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Products.API.Middleware;
 using Products.Application.Interfaces;
@@ -10,10 +11,33 @@ namespace Products.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public async static Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Sequential Execution
+            var stopwatch = Stopwatch.StartNew();
+
+            await Task.Delay(2000);
+            await Task.Delay(2000);
+
+            stopwatch.Stop();
+
+            Console.WriteLine(
+                $"Sequential Time: {stopwatch.ElapsedMilliseconds} ms");
+
+            // Parallel Execution
+            stopwatch.Restart();
+
+            await Task.WhenAll(
+                Task.Delay(2000),
+                Task.Delay(2000)
+            );
+
+            stopwatch.Stop();
+
+            Console.WriteLine(
+                $"Parallel Time: {stopwatch.ElapsedMilliseconds} ms");
             // Add services to the container.
 
 
